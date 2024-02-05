@@ -396,7 +396,7 @@ def update_stop_losses():
         stop_losses = calculate_stop_losses(swing_price, direction)
 
         # Display the stop losses
-        stop_loss_text = "\n".join([f"{key} stop loss is {value:.4f} SGD" for key, value in stop_losses.items()])
+        stop_loss_text = "\n".join([f"{key} stop loss is {value:.6f} SGD" for key, value in stop_losses.items()])
         stop_loss_label.config(text=stop_loss_text)
 
     except ValueError:
