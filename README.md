@@ -1,4 +1,4 @@
-# Forex Data Analysis Tool
+# Day Trading Tool
 
 Welcome to the Day Trading Tool! This tool is designed to assist traders in analyzing data for making informed decisions. It provides features such as fetching historical candle data, calculating risk amounts, and determining take profit key levels.
 
