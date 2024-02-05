@@ -30,7 +30,7 @@ Open a terminal (Command Prompt or PowerShell on Windows, Terminal on macOS/Linu
 
 1. **Run the Script:**
     ```bash
-    python forex_data_analysis_tool.py
+    python exclad_daytrading_tool.py
     ```
     - This will launch the Forex Data Analysis Tool GUI.
 
