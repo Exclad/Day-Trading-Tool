@@ -17,11 +17,21 @@ Download the code by clicking on the "Code" button and selecting "Download ZIP".
 ### Step 2: Install Dependencies
 Open a terminal (Command Prompt or PowerShell on Windows, Terminal on macOS/Linux) and navigate to the directory where you extracted the code.
 
+### Step 3: Install Dependencies
+Open a terminal (Command Prompt or PowerShell on Windows, Terminal on macOS/Linux) and navigate to the directory where you extracted the code.
+
+Run the following command to install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
 ## Configuration
 
 1. **API Key and Account ID:**
     - Open the `config.ini` file.
     - Replace `YOUR_API_KEY` and `YOUR_ACCOUNT_ID` with your OANDA API key and account ID.
+    - To get your Oanda API Key, head over to [Oanda](https://hub.oanda.com/). Ensure that you're on the right account (Demo or Live). Click the "Tools" near the top left and click "API". It should then ask you to generate a API key.
+    - Your account ID is your Oanda's Account Number. It should look something like 123-456-12345678-123
 
 2. **Favorites List:**
     - If you want to use a list of favorite instruments, create or edit the `favorites.txt` file in the project directory. You should also be able to edit the file in the GUI.
