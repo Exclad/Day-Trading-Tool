@@ -203,23 +203,33 @@ def fetch_instruments(api_key, account_id, category):
 
 
 def update_instruments_dropdown(*args):
+    selected_category = category_var.get()
     use_favorites = favorites_var.get()
+
     if use_favorites:
-        category_var.set("Favorites")  # Set the Category dropdown to "Favorites"
+        category_combobox.set("Favorites")  # Set category to "Favorites"
+        category_combobox['state'] = 'readonly'
         instruments = read_favorite_instruments()
+        instrument_combobox['values'] = instruments
+        if instruments:
+            pair_var.set(instruments[0])
     else:
-        category_var.set("Forex")  # Set the Category dropdown back to "Forex"
-        selected_category = category_var.get()
+        category_combobox['state'] = 'normal'
+        categories = ["Forex", "Indices", "Commodities"]
+        category_combobox['values'] = categories
+
+        if not selected_category or selected_category not in categories:
+            # If no category is selected or an invalid category is chosen, default to "Forex"
+            selected_category = "Forex"
+            category_combobox.set(selected_category)
+
         instruments = fetch_instruments(api_key, account_id, selected_category)
+        instrument_combobox['values'] = instruments
 
-    instrument_combobox['values'] = instruments  # Update the Combobox values
-
-    if instruments:
-        pair_var.set(instruments[0])
-    else:
-        pair_var.set("")
-
-
+        if instruments:
+            pair_var.set(instruments[0])
+        else:
+            pair_var.set("Forex")
 
 def fetch_all_instruments(api_key, account_id):
     endpoint = f"https://api-fxpractice.oanda.com/v3/accounts/{account_id}/instruments"
