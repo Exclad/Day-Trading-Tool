@@ -17,9 +17,6 @@ Download the code by clicking on the "Code" button and selecting "Download ZIP".
 ### Step 2: Install Dependencies
 Open a terminal (Command Prompt or PowerShell on Windows, Terminal on macOS/Linux) and navigate to the directory where you extracted the code.
 
-### Step 3: Install Dependencies
-Open a terminal (Command Prompt or PowerShell on Windows, Terminal on macOS/Linux) and navigate to the directory where you extracted the code.
-
 Run the following command to install the required dependencies:
 ```bash
 pip install -r requirements.txt
